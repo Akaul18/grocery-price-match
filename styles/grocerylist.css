@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+
+div
+{
+  border: 0px solid black;
+}
+
+header
+{
+  height: 80px;
+}
+
+a.logo
+{
+  width: 56px;
+  height: 60px;
+}
+
+header .navbar-dark .navbar-nav .nav-link, .navbar-nav .nav-link
+{
+    color: #233049;
+}
+
+.sortText
+{
+  color: #707070;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.sort
+{
+  height: 20px;	width: 44px;
+}
+
+.sortRadio
+{
+  height: 20px;	width: 125px;
+}
+
+.storesList
+{
+  height: auto;
+  padding: 0px;
+}
+
+.storeBox
+{
+  min-height: 340px;
+  max-width: 99%;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.storeBox:hover
+{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.storeLogo
+{
+  height: 60px;
+  max-width: 120px;
+  text-align: center;
+}
+
+.storeName
+{
+  height: 16px;
+  width: 50px;
+  color: #739A2D;
+  font-family: "Proxima Nova";
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.storeDistance
+{
+  height: 20px;
+  width: 160px;
+  color: #739A2D !important;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  line-height: 20px;
+  display: block;
+}
+
+.buyOnlineEnabled
+{
+  height: 40px;
+  width: 160px;
+  border-radius: 4px;
+  background-color: #739A2D;
+  color: #FFFFFF;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.buyOnlineDisabled
+{
+    height: 40px;
+    width: 160px;
+    border-radius: 4px;
+    background-color: rgba(188,195,198,0.4);
+    color: rgba(0,0,0,0.4);
+}
+
+.storeDetails
+{
+  height: 100px;
+  padding-left: 0px;
+}
+
+.storeDivisor
+{
+  box-sizing: border-box;
+  height: 3px;
+  max-width: 95%;
+  border: 1px solid #707070;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.storePriceLabel
+{
+  height: 16px;
+  width: 43px;
+  color: #233049;
+  font-family: "Proxima Nova";
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: right;
+}
+
+.storePrice
+{
+  height: 37px;
+  width: 83px;
+  color: #233049;
+  font-family: "Proxima Nova";
+  font-size: 30px;
+  line-height: 37px;
+  text-align: right;
+}
+
+.brandName, .brandNameMissing
+{
+  height: 16px;
+  width: 47px;
+  font-family: "Proxima Nova";
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.brandName
+{
+  color: #707070;
+}
+
+.brandNameMissing
+{
+  color: #D55148;
+}
+
+.productDetails
+{
+  margin-bottom: 10px;
+}
+
+.productName, .productNameMissing
+{
+  height: 20px;
+  min-width: 70%;
+  color: #707070;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  line-height: 20px;
+  padding-right: 0px;
+}
+
+.productName
+{
+  color: #707070;
+}
+
+.productNameMissing
+{
+  color: #D55148;
+}
+
+.productPrice, .productPriceMissing
+{
+  height: 20px;
+  width: 41px;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+}
+
+.productPrice
+{
+  color: #233049;
+}
+
+.productPriceMissing
+{
+  color: #D55148;
+}
+
+.viewFullGroceryListButton
+{
+  height: 20px;
+  /* width: 190px; */
+  color: #233049;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.map
+{
+  display: none;
+}
+
+@media only screen and (min-width: 600px)
+{
+
+  header, header .headerInfo
+  {
+      margin-top: 0%;
+      height: 80px !important;
+  }
+
+  .storesList
+  {
+    height: 700px;
+    overflow: auto;
+  }
+
+  .storeDistance
+  {
+    width: 174px;
+    font-size: 16px;
+  }
+
+  .buyOnlineEnabled
+  {
+    width: 210px;
+  }
+
+  .buyOnlineDisabled
+  {
+      width: 210px;
+  }
+
+  .storeDetails
+  {
+    padding-left: 10px;
+  }
+
+  .map
+  {
+    display: block;
+  }
+
+}

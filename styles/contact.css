@@ -1,0 +1,85 @@
+.bannerImage
+{
+  background-image: url('../images/contact_spotlight_hd.png');
+}
+
+div.contact-form
+{
+  margin:0 auto;
+  max-width: 1024px;
+  text-align: center;
+}
+
+form{
+  /*margin:0 auto;*/
+  margin-top: 50px;
+  transition: all 4s ease-in-out;
+}
+
+.form-control{
+  border: none;
+  background:transparent;
+  /*outline: none;*/
+  border-bottom: 1px solid #ababab;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+input{
+  height: 45px;
+}
+
+form .submit{
+  background: #7aaa41;
+  border-color: transparent;
+  color:#fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+form .submit:hover{
+  background-color: #f44336;
+  cursor: pointer;
+}
+.logoMar{
+  margin-left:10px;
+}
+.header_li_font{
+  font-size: 1em;
+}
+.outofstock_banner{
+  margin-top:130px;
+  text-align:center;
+  letter-spacing: 2px;
+}
+.para_desc{
+  color:#fff;
+  text-align:center;
+  margin-right:10px;
+}
+.search_margin{
+  margin-top:10px;
+}
+.formMar{
+  max-width: 600px;
+  margin: 0 auto;
+}
+.footerLogoRowMar{
+  margin-top:15px;
+  text-align:center;
+}
+.footerNavLi{
+  text-align: center;
+  letter-spacing: 1px;
+}
+.hidd{
+  display:none;
+  margin-top:12%;
+  margin-bottom: 15%;
+}
+.clr{
+  color:#9a9a9a;
+}

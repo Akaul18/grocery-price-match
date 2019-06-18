@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>InStock - Reviews</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova"> -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="../styles/css.css">
+    <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/review.css">
+    <script type="text/javascript" src="../scripts/reviews.js"></script>
+    <script type="text/javascript" src="../scripts/changeNavBar.js" defer></script>
+    <!-- <link rel="stylesheet" href="/path/to/font-awesome.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <!-- <link rel="stylesheet" href="css/simple-rating.css"> -->
+
+
+    </script>
+  </head>
+
+  <body>
+
+    <header class="bannerImage" id="background">
+        <nav class="navbar navbar-expand-sm navbar-dark mb-3 navbarFixed">
+          <div class="container" id="divNavHeader">
+            <a class="navbar-brand logo" href="../index.html">
+              <img id="logoWhite" src="../images/header_logo.png" class="img-fluid" alt="">
+              <img id="logoBlue" src="../images/header_logo_blue.png" class="img-fluid hidden" alt="">
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/review.html">REVIEWS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/contact.html">CONTACT US</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                      <button class="buttonGroceryList dropdown-toggle" type="button" data-toggle="dropdown">GROCERY LIST 3</button>
+                      <div class="dropdown-menu container groceryListPanel">
+
+                        <div class="row align-items-center">
+                          <div class="col groceryListPanelTitle">
+                            3 Items
+                          </div>
+                          <div class="col text-right">
+                            <button class="buttonGroceryListEdit" href="#">EDIT</button>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col">
+                            <hr class="groceryListPanelHR">
+                          </div>
+                        </div>
+
+                        <div class="row align-items-center">
+                          <div class="col groceryListPanelProductImage">
+                            <img class="groceryListPanelProduct" src="../images/search_images/img_prod09.png" alt="">
+                          </div>
+                          <div class="col">
+                            <div class="row">
+                              <div class="col brandName">
+                                Lucerne
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col productName">
+                                Classic Milk 2% (4L)
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col">
+                            <hr class="groceryListPanelProductHR">
+                          </div>
+                        </div>
+
+                        <div class="row align-items-center">
+                          <div class="col groceryListPanelProductImage">
+                            <img class="groceryListPanelProduct" src="../images/search_images/img_prod07.png" alt="">
+                          </div>
+                          <div class="col">
+                            <div class="row">
+                              <div class="col brandName">
+                                Organic Valley
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col productName">
+                                Pepper Jack Cheese (8oz)
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col">
+                            <hr class="groceryListPanelProductHR">
+                          </div>
+                        </div>
+
+                        <div class="row align-items-center">
+                          <div class="col groceryListPanelProductImage">
+                            <img class="groceryListPanelProduct" src="../images/search_images/img_prod08.png" alt="">
+                          </div>
+                          <div class="col">
+                            <div class="row">
+                              <div class="col brandName">
+                                Casillero del Diablo
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col productName">
+                                Pinot Grigio (75ml)
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col">
+                            <hr class="groceryListPanelProductHR">
+                          </div>
+                        </div>
+
+                        <div class="row" style="">
+                          <div class="col">
+                            <button class="buttonCheckGroceryList" onclick="javascript:window.location='../pages/grocerylist.html';">CHECK STORE PRICES</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ANDRÉ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+          <div class="row headerInfo align-items-center">
+            <div class="col">
+              <p class="bannerHeaderText">Our users love us!</p>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <main class="">
+
+            <form id="newReviewText" class="reviewInput" action="index.html" method="post">
+
+                <div class="reviewTextInput">
+                  <textarea type="text" id="reviewText" name="reviewText" value="reviewText" placeholder="Let us know what you think about InStock..."></textarea>
+                </div>
+
+                <input class="rating" type="hidden" value="3">
+
+                    <div class="simple-rating star-rating rating">
+                        <i class="fa fa-star starChecked" data-rating="1"></i>
+                        <i class="fa fa-star starChecked" data-rating="2"></i>
+                        <i class="fa fa-star starChecked" data-rating="3"></i>
+                        <i class="fa fa-star starChecked" data-rating="4"></i>
+                        <i class="fa fa-star starChecked" data-rating="5"></i>
+                    </div>
+
+                </input>
+
+                <div class="reviewButtonDiv">
+                    <button class="reviewButton" type="button" name="button" onclick="newReview()">SUBMIT</button>
+                </div>
+
+            </form>
+
+      <div class="">
+        <h1>
+        </h1>
+      </div>
+
+    <div id="reviewTextSubmit">
+    </div>
+
+    <div class="reviews">
+
+        <div class="singleReview">
+
+            <div class="reviewAvatar">
+                <img src="../images/reviewAvater_01.png" alt="Review Avatar">
+            </div>
+
+            <div class="reviewName">
+                Marinela "Always Hungry" Poso
+            </div>
+
+            <div class="date">October 2018
+            </div>
+
+           <div class="stars">
+            <span class="fa fa-star starChecked"></span>
+            <span class="fa fa-star starChecked"></span>
+            <span class="fa fa-star starChecked"></span>
+            <span class="fa fa-star starChecked"></span>
+            <span class="fa fa-star starChecked"></span>
+           </div>
+
+           <div class="reviewText">
+              At first, I was incredulous about this App. Since I don't have time to do my groceries because my work, I gave this App a chance. I can tell you, the best decision I did. The fact that you can do your groceries from the comfort of your couch? This is amazing.
+           </div>
+
+        </div>
+
+        <div class="singleReview">
+
+                <div class="reviewAvatar">
+                    <img src="../images/reviewAvater_02.png" alt="Review Avatar">
+                </div>
+
+                <div class="reviewName">
+                    Ankur 'The Sacred Man' Kaul
+                </div>
+
+                <div class="date">October 2018
+                </div>
+
+               <div class="stars">
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+               </div>
+
+            <div class="reviewText">
+              A treat to order online. I like being able to check and compare the prices from different stores. Makes grocery shopping easier and helps me save a lot of money and time.
+            </div>
+
+        </div>
+
+        <div class="singleReview">
+
+                <div class="reviewAvatar">
+                    <img src="../images/reviewAvater_03.png" alt="Review Avatar">
+                </div>
+
+                <div class="reviewName">
+                    Denis 'The Big Brother' Calixto
+                </div>
+
+                <div class="date">October 2018
+                </div>
+
+               <div class="stars">
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+               </div>
+
+            <div class="reviewText">
+              This is good if you can't go outside because you're working hard on something. Useful when you want to get food quickly and there's no store nearby.
+            </div>
+
+        </div>
+
+        <div class="singleReview">
+
+                <div class="reviewAvatar">
+                    <img src="../images/reviewAvater_04.png" alt="Review Avatar">
+                </div>
+
+                <div class="reviewName">
+                    André 'The Hyperactive' Falco
+                </div>
+
+                <div class="date">October 2018
+                </div>
+
+               <div class="stars">
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+               </div>
+
+            <div class="reviewText">
+              I love how their products are locally sourced - it's brilliant! The price comparison feature is very helpful and saves me a lot of money and time. One thing I especially love InStock for, though, is for the products they have that I can't seem to find anywhere else.
+            </div>
+
+        </div>
+
+        <div class="singleReview">
+
+                <div class="reviewAvatar">
+                    <img src="../images/reviewAvater_05.png" alt="Review Avatar">
+                </div>
+
+                <div class="reviewName">
+                    Nikhil 'I Want My Lamborguini!' Khosla
+                </div>
+
+                <div class="date">October 2018
+                </div>
+
+               <div class="stars">
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+                <span class="fa fa-star starChecked"></span>
+               </div>
+
+            <div class="reviewText">
+              We've been wanting to try InStock out for some time, now that I'm working from home I thought I'd give it a go. I'm super happy that I don't have to spend my time on the weekend running all over town for groceries!
+            </div>
+
+        </div>
+
+    </div>
+
+    </main>
+
+    <footer class="">
+
+      <div class="container">
+          <div class="row">
+            <!-- 2 4 column divs, the second offset by 4 -->
+            <div class="col-sm-2">
+              <img src="../images/header_logo.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-4 offset-sm-6">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/search.html">SEARCH</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/review.html">REVIEWS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/contact.html">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- 2 4 column divs, the second offset by 4 -->
+            <div class="col-sm-2">
+              <i class="fab fa-facebook-f socialIcons mr-3"></i>
+              <i class="fab fa-twitter socialIcons mr-3"></i>
+              <i class="fab fa-instagram socialIcons"></i>
+            </div>
+            <div class="col-sm-3">
+              &copy; InStock Inc. All rights reserved.
+            </div>
+            <div class="col-sm-2 offset-sm-3">
+              <i class="fas fa-phone contactIcons" style="transform: rotate(90deg);"></i> +1 604 123 4567
+            </div>
+            <div class="col-sm-2">
+              <i class="fas fa-envelope contactIcons"></i> hello@instock.com
+            </div>
+          </div>
+      </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  </body>
+</html>

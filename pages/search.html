@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>InStock - Search</title>
+  <script type="text/javascript" src="../scripts/main.js" defer></script>
+  <script type="text/javascript" src="../scripts/changeNavBar.js" defer></script>
+  <!-- bootstrap files -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="../scripts/jquery-ui.custom/jquery-ui.js"></script>
+
+  <!--  Styles  -->
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../styles/css.css">
+  <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+  <link rel="stylesheet" href="../styles/search.css">
+  <link rel="stylesheet" type="text/css" href="../scripts/jquery-ui.custom/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="../styles/login.css">
+</head>
+<body>
+  <header class="bannerImage" id="background">
+      <nav class="navbar navbar-expand-sm navbar-dark mb-3 navbarFixed">
+        <div class="container" id="divNavHeader">
+          <a class="navbar-brand logo" href="../index.html">
+            <img id="logoWhite" src="../images/header_logo.png" class="img-fluid" alt="">
+            <img id="logoBlue" src="../images/header_logo_blue.png" class="img-fluid hidden" alt="">
+          </a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="review.html">REVIEWS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT US</a>
+              </li>
+              <li id="liLogin" class="nav-item">
+                <a class="nav-link buttonLogIn" data-toggle="modal" data-target="#loginModal">LOGIN</a>
+              </li>
+              <li id="liGroceryList" class="nav-item" style="display: none;">
+                  <div class="dropdown">
+                    <button id="btnGroceryList" class="buttonGroceryList dropdown-toggle" type="button" data-toggle="dropdown">GROCERY LIST 3</button>
+                    <div class="dropdown-menu container groceryListPanel">
+
+                      <div class="row align-items-center">
+                        <div class="col groceryListPanelTitle">
+                          3 Items
+                        </div>
+                        <div class="col text-right">
+                          <button class="buttonGroceryListEdit" href="#">EDIT</button>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col">
+                          <hr class="groceryListPanelHR">
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col groceryListPanelProductImage">
+                          <img class="groceryListPanelProduct" src="../images/search_images/img_prod09.png" alt="">
+                        </div>
+                        <div class="col">
+                          <div class="row">
+                            <div class="col brandName">
+                              Lucerne
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col productName">
+                              Classic Milk 2% (4L)
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col">
+                          <hr class="groceryListPanelProductHR">
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col groceryListPanelProductImage">
+                          <img class="groceryListPanelProduct" src="../images/search_images/img_prod07.png" alt="">
+                        </div>
+                        <div class="col">
+                          <div class="row">
+                            <div class="col brandName">
+                              Organic Valley
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col productName">
+                              Pepper Jack Cheese (8oz)
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col">
+                          <hr class="groceryListPanelProductHR">
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col groceryListPanelProductImage">
+                          <img class="groceryListPanelProduct" src="../images/search_images/img_prod08.png" alt="">
+                        </div>
+                        <div class="col">
+                          <div class="row">
+                            <div class="col brandName">
+                              Casillero del Diablo
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col productName">
+                              Pinot Grigio (75ml)
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col">
+                          <hr class="groceryListPanelProductHR">
+                        </div>
+                      </div>
+
+                      <div class="row" style="">
+                        <div class="col">
+                          <button class="buttonCheckGroceryList" onclick="javascript:window.location='../pages/grocerylist.html';">CHECK STORE PRICES</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </li>
+              <li id="liSignUp" class="nav-item">
+                <button class="buttonSignUp" href="#">SIGN UP</button>
+              </li>
+              <li id="liUsername" class="nav-item" style="display:none;">
+                <a class="nav-link" href="#">ANDRÉ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--Login Modal-->
+      <div class="modal" id="loginModal">
+        <div class="modal-dialog modalDialog">
+          <div class="modal-content loginModal">
+
+            <div class="loginLogo">
+                <img src="../images/logo_login.png" alt="InStock">
+            </div>
+
+            <div class="loginCloseDiv">
+                <button class="close" data-dismiss="modal"><img class="loginClose" src="../images/close.png" alt="Close"></img></button>
+            </div>
+
+            <div class="loginInfo">
+                <div class="loginHeader">
+                  <h5 class="modal-title loginTitle">Log in to create your grocery list.</h5>
+                </div>
+                <div class="loginBody">
+                  <form>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                  </form>
+                </div>
+
+                <div class="">
+                  <button class="loginButton" data-dismiss="modal" onclick="javascript:showGroceryListButton(); hideUserUnknownButtons();">Login</button>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="callout" for="exampleCheck1">Keep me logged in</label>
+                </div>
+                <div class="callout">
+                    Don't have an account yet?
+                </div>
+                <div>
+                    <a class="linkPrimary" href="#">Sign Up</a>
+                </div>
+                <div class="calloutItalic">
+                    Terms of Service  |   Privacy Policy
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row headerInfo align-items-center">
+          <div class="col">
+            <div class="row">
+              <div class="col">
+				  <p class="bht">Compare grocery prices!</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                  <p class="p-3 bannerText text-center mb-5" style="position:relative;">
+                  <input type="text" class="prod_search psearch" id="prod_search" name="product" placeholder="Search for product(s)">
+                  <span class="spanMag"><i class="fas fa-search srchIcon"></i></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<!-- main -->
+    <main class="mt-4">
+      <div class="container">
+        <div class="row sortRowP">
+          <div class="col-xs-6 sortPriceP">
+            <label class="">SORT:</label>
+            <input class="" type="radio" id="price" name="sort" checked>
+            <label for="price">Price (low to high)</label>
+          </div>
+          <div class="col-xs-6 distP">
+            <input class="" type="radio" id="distance" name="sort">
+            <label for="distance">Distance (near to far)</label>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row row1">
+          <div class="col-sm-6">
+            <div class="container comBrdr">
+            <div class="row mt-2">
+              <div class="col-sm-3">
+                <img class="comBrdr" src="../images/search_images/img_prod01.png" alt="milk image">
+              </div>
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col-sm-12 marL">
+                    <div class="row">
+                      <div class="col">Lucerne</div>
+                    </div>
+                    <div class="row prodName">
+                      <div class="col">Homogenized Milk 3.25%(1L)</div>
+                    </div>
+                    <div class="row fntBtn">
+                      <div class="col">
+                        <input class="btnG" type="button" data-toggle="modal" data-target="#loginModal" value="ADD TO GROCERY LIST">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9" style="">
+                <p>
+					<a class="prodType" href="https://www.safeway.ca/" target="_blank">Safeway</a><br>
+					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+					  2km ( 10mins by walking)</a>
+				  	</span>
+				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9" style="">
+				  <p>
+  					<a class="prodType" href="https://www.londondrugs.com/" target="_blank">London Drugs</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  3km ( 15mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9" style="">
+				  <p>
+  					<a class="prodType" href="https://www.walmart.ca" target="_blank">Walmart</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  4km ( 20mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+          </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="container comBrdr">
+            <div class="row mt-2">
+              <div class="col-sm-3">
+                <img class="comBrdr" src="../images/search_images/img_prod02.png" alt="milk image">
+              </div>
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col-sm-12 marL">
+                    <div class="row">
+                      <div class="col">Lucerne</div>
+                    </div>
+                    <div class="row prodName">
+                      <div class="col">Skim Milk(1L)</div>
+                    </div>
+                    <div class="row fntBtn">
+                      <div class="col">
+                        <input class="btnG" type="button" data-toggle="modal" data-target="#loginModal" value="ADD TO GROCERY LIST">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9">
+				  <p>
+  					<a class="prodType" href="https://www.safeway.ca/" target="_blank">Safeway</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  2km ( 10mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9">
+				  <p>
+  					<a class="prodType" href="https://www.londondrugs.com/" target="_blank">London Drugs</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  3km ( 15mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9">
+				  <p>
+  					<a class="prodType" href="https://www.walmart.ca" target="_blank">Walmart</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  4km ( 20mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="row mt-2 row2">
+          <div class="col-sm-6">
+            <div class="container comBrdr">
+            <div class="row mt-2">
+              <div class="col-sm-3">
+                <img class="comBrdr" src="../images/search_images/img_prod05.png" alt="milk image">
+              </div>
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col-sm-12 marL">
+                    <div class="row">
+                      <div class="col">Lucerne</div>
+                    </div>
+                    <div class="row prodName">
+                      <div class="col">Chocolate Milk 1%(4L)</div>
+                    </div>
+                    <div class="row fntBtn">
+                      <div class="col">
+                        <input class="btnG" type="button" data-toggle="modal" data-target="#loginModal" value="ADD TO GROCERY LIST">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9">
+				  <p>
+  					<a class="prodType" href="https://www.safeway.ca/" target="_blank">Safeway</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  2km ( 10mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9">
+				  <p>
+  					<a class="prodType" href="https://www.londondrugs.com/" target="_blank">London Drugs</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  3km ( 15mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9">
+				  <p>
+  					<a class="prodType" href="https://www.walmart.ca" target="_blank">Walmart</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  4km ( 20mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+          </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="container comBrdr">
+              <div class="row mt-2">
+                <div class="col-sm-3">
+                  <img class="comBrdr" src="../images/search_images/img_prod06.png" alt="milk image">
+                </div>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-12 marL">
+                      <div class="row">
+                        <div class="col">Lucerne</div>
+                      </div>
+                      <div class="row prodName">
+                        <div class="col">Partly Skimmed Milk 2%(1L)</div>
+                      </div>
+                      <div class="row fntBtn">
+                        <div class="col">
+                          <input class="btnG" type="button" data-toggle="modal" data-target="#loginModal" value="ADD TO GROCERY LIST">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-9">
+					<p>
+    					<a class="prodType" href="https://www.safeway.ca/" target="_blank">Safeway</a><br>
+    					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+    					  2km ( 10mins by walking)</a>
+    				  	</span>
+    				</p>
+                </div>
+                <div class="col-sm-3 textAr priceSt">$13.75</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-9">
+					<p>
+						<a class="prodType" href="https://www.londondrugs.com/" target="_blank">London Drugs</a><br>
+						<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+						  3km ( 15mins by walking)</a>
+					  	</span>
+					</p>
+                </div>
+                <div class="col-sm-3 textAr priceSt">$13.75</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-9">
+					<p>
+    					<a class="prodType" href="https://www.walmart.ca" target="_blank">Walmart</a><br>
+    					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+    					  4km ( 20mins by walking)</a>
+    				  	</span>
+    				</p>
+                </div>
+                <div class="col-sm-3 textAr priceSt">$13.75</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- hidden new row -->
+        <div class="row mt-2 row3 hid">
+          <div class="col-sm-6">
+            <div class="container comBrdr">
+            <div class="row mt-2">
+              <div class="col-sm-3">
+                <img class="comBrdr" src="../images/search_images/img_prod03.png" alt="milk image">
+              </div>
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col-sm-12 marL">
+                    <div class="row">
+                      <div class="col">Natrel</div>
+                    </div>
+                    <div class="row prodName">
+                      <div class="col">Lactose Free 1%(2L)</div>
+                    </div>
+                    <div class="row fntBtn">
+                      <div class="col">
+                        <input class="btnG" type="button" data-toggle="modal" data-target="#loginModal" value="ADD TO GROCERY LIST">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9">
+				  <p>
+  					<a class="prodType" href="https://www.safeway.ca/" target="_blank">Safeway</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  2km ( 10mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9">
+				  <p>
+  					<a class="prodType" href="https://www.londondrugs.com/" target="_blank">London Drugs</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  3km ( 15mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9">
+				  <p>
+  					<a class="prodType" href="https://www.walmart.ca" target="_blank">Walmart</a><br>
+  					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+  					  4km ( 20mins by walking)</a>
+  				  	</span>
+  				</p>
+              </div>
+              <div class="col-sm-3 textAr priceSt">$13.75</div>
+            </div>
+          </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="container comBrdr">
+              <div class="row mt-2">
+                <div class="col-sm-3">
+                  <img class="comBrdr" src="../images/search_images/img_prod04.png" alt="milk image">
+                </div>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-12 marL">
+                      <div class="row">
+                        <div class="col">Natrel</div>
+                      </div>
+                      <div class="row prodName">
+                        <div class="col">Organic 2%(2L)</div>
+                      </div>
+                      <div class="row fntBtn">
+                        <div class="col">
+                          <input class="btnG" type="button" data-toggle="modal" data-target="#loginModal" value="ADD TO GROCERY LIST">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-9">
+					<p>
+    					<a class="prodType" href="https://www.safeway.ca/" target="_blank">Safeway</a><br>
+    					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+    					  2km ( 10mins by walking)</a>
+    				  	</span>
+    				</p>
+                </div>
+                <div class="col-sm-3 textAr priceSt">$13.75</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-9">
+					<p>
+    					<a class="prodType" href="https://www.londondrugs.com/" target="_blank">London Drugs</a><br>
+    					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+    					  3km ( 15mins by walking)</a>
+    				  	</span>
+    				</p>
+                </div>
+                <div class="col-sm-3 textAr priceSt">$13.75</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-9">
+					<p>
+    					<a class="prodType" href="https://www.walmart.ca" target="_blank">Walmart</a><br>
+    					<span><a class="prodDist" target="_blank" href="https://www.google.com/maps/dir/Langara+College,+100+W+49th+Ave,+Vancouver,+BC+V5Y+2Z6,+Canada/Walmart+Grandview+Supercentre,+3585+Grandview+Hwy,+Vancouver,+BC+V5M+2G7/@49.245184,-123.0805496,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5486746f412563f7:0x36606d221509fdfe!2m2!1d-123.108642!2d49.2245834!1m5!1m1!1s0x548676d0e23c2463:0x12e841420e784e93!2m2!1d-123.0269564!2d49.2591695!3e3">
+    					  4km ( 20mins by walking)</a>
+    				  	</span>
+    				</p>
+                </div>
+                <div class="col-sm-3 textAr priceSt">$13.75</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- load more -->
+        <div class="row text-center mt-2 show">
+          <div class="col-sm-12">
+            <!--<button type="button" class="btn more" onclick="loadMore()">LOAD MORE</button>-->
+            <div class="more text-center" onclick="loadMore()">
+    	        LOAD MORE
+    	      </div>
+          </div>
+        </div>
+      </div>
+    </main>
+<!-- main end -->
+
+    <footer class="">
+
+      <div class="container">
+          <div class="row">
+            <!-- 2 4 column divs, the second offset by 4 -->
+            <div class="col-sm-2">
+              <img src="../images/header_logo.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-4 offset-sm-6">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/search.html">SEARCH</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/review.html">REVIEWS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/contact.html">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- 2 4 column divs, the second offset by 4 -->
+            <div class="col-sm-2">
+              <i class="fab fa-facebook-f socialIcons mr-3"></i>
+              <i class="fab fa-twitter socialIcons mr-3"></i>
+              <i class="fab fa-instagram socialIcons"></i>
+            </div>
+            <div class="col-sm-3">
+              &copy; InStock Inc. All rights reserved.
+            </div>
+            <div class="col-sm-2 offset-sm-3">
+              <i class="fas fa-phone contactIcons" style="transform: rotate(90deg);"></i> +1 604 123 4567
+            </div>
+            <div class="col-sm-2">
+              <i class="fas fa-envelope contactIcons"></i> hello@instock.com
+            </div>
+          </div>
+      </div>
+
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+.bannerImage
+{
+  background-image: url('../images/main_mob.png');
+}
+#background {
+  min-height: 667px;
+}
+
+main div.categories
+{
+  margin:0 auto;
+  margin-top: 100px;
+  max-width: 1024px;
+  text-align: center;
+}
+
+.pointer
+{
+  margin-bottom: 20px;
+}
+
+main .Dairy{
+  float: left;
+  margin-left: 20px;
+}
+
+#search  {
+  padding-bottom: 20px;
+}
+
+main .Bakery{
+  float: left;
+  margin-left: 20px;
+}
+
+main .Pantry{
+  float: left;
+  margin-left: 20px;
+}
+
+main .Produce{
+  float: left;
+  margin-left: 20px;
+}
+
+main .load
+{
+  margin:0 auto;
+  margin-top:30px;
+  margin-bottom:30px;
+  width:600px;
+}
+
+main .load .buttonLoad
+{
+    max-width: 600px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    background-color: #d44b75;
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    height: 50px;
+}
+
+main .load .buttonLoad:hover{
+  background-color: #f44336;
+  cursor: pointer;
+}
+main .brow {
+  font-size: 30px;
+  color: #233049;
+  font-family: "Proxima Nova";
+  font-weight: 300;
+  line-height: 37px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+  .searchM{
+	  margin-top:30%;
+  }
+  .row4{
+	  display:none;
+  }
+ @media (min-width:600px)
+ {
+	 .searchM{
+		 margin-top:65%;
+	 }
+	 .bannerImage
+	 {
+	   background-image: url('../images/main_hd.png');
+	 }
+ }
+.marB{
+	margin-bottom:10px;
+}
+/* @media (min-width:767px)
+{
+	.marB{
+		margin-bottom:0px;
+	}
+} */
